@@ -6,7 +6,7 @@ def dollar():
 
     src = req.text
 
-    soup = BeautifulSoup(src, "html.parser")
+    soup = BeautifulSoup(src, 'lxml')
     items = (soup.find('div',class_='desktop:relative desktop:bg-white').find('div',class_='relative flex').find('div',class_='mb-3 flex flex-wrap items-center gap-x-4 gap-y-2 md:mb-0.5 md:gap-6'))
 
     final=str(items)
